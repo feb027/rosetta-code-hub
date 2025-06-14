@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# Rosetta Code Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, interactive web portal showcasing over 1,000 programming tasks from the Rosetta Code chrestomathy. Built with modern web technologies and designed with a sleek, dark "code vibe" aesthetic.
 
-Currently, two official plugins are available:
+## 🚀 Project Vision
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Rosetta Code Hub serves as a central, lightning-fast portal for accessing interactive web-based visualizations of programming tasks. This project combines performance, visual appeal, and comprehensive documentation to create a portfolio piece that demonstrates both technical skill and design sensibility.
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **⚡ High Performance**: Handles 1000+ tasks without performance degradation
+- **🔍 Real-time Search**: Instant client-side filtering and search
+- **🎨 Modern Design**: Dark theme with Nord color palette and "code vibe" aesthetic
+- **📱 Fully Responsive**: Seamless experience across all device sizes
+- **🎭 Smooth Animations**: Framer Motion powered micro-interactions
+- **📊 Interactive Visualizations**: Each task rendered as an engaging web component
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Technology Stack
+
+- **Frontend**: React 19 + TypeScript
+- **Build Tool**: Vite (with Bun runtime)
+- **Styling**: Tailwind CSS v4 with Nord theme
+- **Animation**: Framer Motion
+- **Routing**: React Router
+- **Data Fetching**: TanStack Query
+- **State Management**: Zustand (when needed)
+- **UI Components**: Radix UI + Lucide Icons
+
+## 🏗️ Architecture
+
+This project follows a modular, feature-based architecture with strict separation of concerns. Each file maintains a single responsibility with a ~250 line limit to ensure maintainability.
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── layout/         # Layout components (Header, Footer, etc.)
+│   └── ui/             # Base UI primitives
+├── pages/              # Route-level components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions and configurations
+├── types/              # TypeScript type definitions
+└── visualizations/     # Individual task implementations
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚦 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Install dependencies
+bun install
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# Start development server
+bun dev
+
+# Build for production
+bun run build
+
+# Preview production build
+bun run preview
 ```
+
+## 📖 Documentation
+
+- **[SRS Document](../docs/srs.md)**: Complete software requirements specification
+- **[Implementation Plan](../docs/implementation.md)**: Step-by-step development guide
+- **[Architecture Guide](./architecture.md)**: Technical architecture details
+- **[Progress Tracking](./progress.md)**: Development progress and milestones
+
+## 🎨 Design System
+
+The UI follows a carefully crafted design system based on the Nord color palette:
+
+- **Primary Background**: `#2E3440` (nord0)
+- **Secondary Background**: `#3B4252` (nord1) 
+- **Accent Color**: `#88C0D0` (nord8) - Deep light blue
+- **Primary Text**: `#ECEFF4` (nord6)
+- **Typography**: Inter (UI) + JetBrains Mono (code/titles)
+
+## 🤝 Contributing
+
+This is primarily a portfolio project, but contributions and feedback are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Built with ❤️ and lots of ☕ by [Aqua]**
